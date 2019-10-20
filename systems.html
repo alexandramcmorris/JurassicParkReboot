@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/systems.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/trontastic/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link href="P2.css" rel="stylesheet" type="text/css" />
+<!--bootstrap only used for forms-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style>
+	#VPletter
+	{
+		margin-left: 150px;
+		margin-right: 50px;
+		background-color: #d6dbd4;
+		line-height: 150%;
+		text-size: 1.5em;
+	}
+	
+	#emForm
+	{
+		background-color: #d6dbd4;
+		padding: 15px;
+	}
+</style>
+
+<script>
+$(document).ready(function()
+{	//top menu display
+	$("#topM").menu();	
+				 
+	$( "#sideMenu" ).hover(function() {
+		$( "#sideMenu h3" ).animate({
+		color: "green",
+		backgroundColor: "black"
+		});
+		});
+	
+	$('#name input').blur(function(){
+		if($(this).val().length ===0) {
+			alert("Name is required");
+		}
+	});
+	$('#email input').blur(function(){
+		if($(this).val().length === 0) {
+			alert("Email is required");
+		}
+	});
+	$('#message input').blur(function() {
+		if($(this).val().length === 0) {
+			alert("Message needs content");
+		}
+	});
+	
+	
+	
+	
+	
+});	
+</script>
+
+</head>
+<body>
+
+<div id="menu">
+
+<ul id="topM">
+
+	<li class="topMenu">
+		<a href="humans.html">HUMANS</a>
+		<ul>
+			<li><a href="humans.html#handBook">Employee HandBook</a></li>
+			<li><a href="humans.html#lost">Lost and Found</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+	<a href="marketing.html">MARKETING</a>
+		<ul>
+			<li><a href="marketing.html#deve">Development</a></li>
+			<li><a href="marketing.html#proposal">Preliminary Plans</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+		<a href="security.html">SECURITY</a>
+		</li>
+	
+	<li class="topMenu">
+		<a href="systems.html">SYSTEMS</a>
+	</li>
+	
+	<li class="topMenu">
+	<a href="dinosaurs.html">DINOSAURS</a>
+		<ul>
+			<li><a href="dinosaurs.html#brachInfo">Brachiosaurus</a></li>
+			<li><a href="dinosaurs.html#diloInfo">Dilophosaurus</a></li>
+			<li><a href="dinosaurs.html#gallInfo">Gallimimus</a></li>
+			<li><a href="dinosaurs.html#paraInfo">Parasaurs</a></li>
+			<li><a href="dinosaurs.html#procInfo">Procompsognathus</a></li>
+			<li><a href="dinosaurs.html#puttInfo">Puttacosaurus</a></li>
+			<li><a href="dinosaurs.html#tricInfo">Triceratops</a></li>
+			<li><a href="dinosaurs.html#tyranInfo">Tyrannosaurus Rex</a></li>
+			<li><a href="dinosaurs.html#veloInfo">Velociraptor</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+
+<div id="sideMenu">
+	<h3>I</h3>
+	<h3>N</h3>
+	<h3>T</h3>
+	<h3>R</h3>
+	<h3>A</h3>
+	<h3>N</h3>
+	<h3>E</h3>
+	<h3>T</h3>
+	<h3><a href="index.html">HOME</a></h3>
+</div>
+
+	<h1>Welcome to Systems Administration</h1>
+
+	<div id="VPletter">
+	<p>
+		Any company with InGen's size and scope requires a well-planned network to facilitate the exchange of information. Add to that the daily operation of an attraction as unique as the Park, and one is suddenly faced with a task of truly Jurassic proportions.
+		Network/Computing, a subdivision of Operations, has proven itself worthy. With an NT Operating System and Server (as well as a couple of SGIs) and a Cray to crunch the numbers, InGen boasts a computer network comparable to corporations several times its size.
+		The IntraNet, developed by star programmer Jason Preston, allows the various divisions that comprise InGen to communicate at blazing speed with the utmost convenience. More than a network, the IntraNet helps to foster a sense of community, as each employee is able to keep abreast of the affairs of his or her co-workers (with the obvious exception of Security - we can't have everyone knowing everything!).
+		<br />
+		I believe strongly in an open-door policy - please feel free to stop by with questions, concerns or just to chat...
+		<br />
+		James Saunders
+		<br />
+		Vice President, Systems Administration
+	</p>
+	</div>
+	
+	<div id="contact">
+		<form id="emForm">
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input type="name" class="form-control" id="name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email">
+		</div>
+		
+		<div class="form-group">
+			<label for="message">Message:</label>
+			<textarea name="comment" class="form-control" id="message"></textarea>
+		</div>
+		<div class="checkbox">
+			<label>Who would you like to email?</label>
+			<label><input type="checkbox">Boutcher J</label>
+			<label><input type="checkbox">Davis K</label>
+			<label><input type="checkbox">Dillinger M</label>
+			<label><input type="checkbox">Hammond J</label>
+		</div>
+		<button type="submit" class="btn btn-deault" id="suBmit">Send</button>
+</form>
+	</div>
+
+
+</body>
+</html>

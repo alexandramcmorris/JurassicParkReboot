@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/security.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+
+
+<!--jquery links-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<!--css link-->
+<link href="P2.css" rel="stylesheet" type="text/css" />
+<!--bootstrap link-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+	#letterS
+	{
+		position: absolute;
+		left: 50%;
+	}
+	
+	.dialogButton
+	{
+		color: black;
+		background-color: white;
+	}
+	
+	img
+	{
+		width: 250px;
+	}
+
+	#security
+	{
+		margin-left: 150px;
+	}
+	
+	#security p, h2
+	{
+		font-size: 2em;
+		text-align: center;
+	}
+	
+	#security div
+	{
+		width: 300px;
+	}
+	
+	
+
+</style>
+
+
+<script>
+
+
+
+$(document).ready(function()
+{	//top menu display
+
+	$("#topM").menu();	
+				 
+	$( "#sideMenu" ).hover(function() {
+		$( "#sideMenu h3" ).animate({
+		color: "green",
+		backgroundColor: "black"
+		});
+		});
+	
+	window.alert("Please use only numbers for Employee ID, password anything");
+	
+	//employee id only numbers
+	$("#emId").keypress(function (e) {
+    if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+		});
+
+	//add event when submitted
+	$('#suBmit').click(function() { 
+		$('#enterForm').hide();
+		$('#security').show();
+		$('#dialog').dialog('open');
+		return false;
+		});
+		
+	$('#dialog').dialog({
+		autoOpen: false,
+		modal: true,
+		width: 700,
+		buttons: {
+			"Ok": function() {
+				$(this).dialog("close");
+			},
+			"Cancel": function() {
+				$(this).dialog("close");
+			}
+		}	
+	});
+	
+	$('#ajay').click(function(){
+		$('#ajayD').hide("highlight"),
+		$('#dieterD').show()
+	});
+	
+	$('#dieter').click(function(){
+		$('#dieterD').hide("highlight"),
+		$('#eddieD').show()
+	});
+	
+	$('#eddie').click(function(){
+		$('#eddieD').hide("highlight"),
+		$('#ajayD').show();
+	});
+});	
+</script>
+
+</head>
+<body onload="getAlert()">
+
+<div id="menu">
+
+<ul id="topM">
+
+	<li class="topMenu">
+		<a href="humans.html">HUMANS</a>
+		<ul>
+			<li><a href="humans.html#handBook">Employee HandBook</a></li>
+			<li><a href="humans.html#lost">Lost and Found</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+	<a href="marketing.html">MARKETING</a>
+		<ul>
+			<li><a href="marketing.html#deve">Development</a></li>
+			<li><a href="marketing.html#proposal">Preliminary Plans</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+		<a href="security.html">SECURITY</a>
+		</li>
+	
+	<li class="topMenu">
+		<a href="systems.html">SYSTEMS</a>
+	</li>
+	
+	<li class="topMenu">
+	<a href="dinosaurs.html">DINOSAURS</a>
+		<ul>
+			<li><a href="dinosaurs.html#brachInfo">Brachiosaurus</a></li>
+			<li><a href="dinosaurs.html#diloInfo">Dilophosaurus</a></li>
+			<li><a href="dinosaurs.html#gallInfo">Gallimimus</a></li>
+			<li><a href="dinosaurs.html#paraInfo">Parasaurs</a></li>
+			<li><a href="dinosaurs.html#procInfo">Procompsognathus</a></li>
+			<li><a href="dinosaurs.html#puttInfo">Puttacosaurus</a></li>
+			<li><a href="dinosaurs.html#tricInfo">Triceratops</a></li>
+			<li><a href="dinosaurs.html#tyranInfo">Tyrannosaurus Rex</a></li>
+			<li><a href="dinosaurs.html#veloInfo">Velociraptor</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+
+<div id="sideMenu">
+	<h3>I</h3>
+	<h3>N</h3>
+	<h3>T</h3>
+	<h3>R</h3>
+	<h3>A</h3>
+	<h3>N</h3>
+	<h3>E</h3>
+	<h3>T</h3>
+	<h3><a href="index.html">HOME</a></h3>
+</div>
+
+<div id="enterForm">
+<form id="emForm">
+	<div class="form-group">
+		<label for="email"> Employee Id:</label>
+		<input type="email" class="form-control" id="emId" placeholder="Numbers only">
+	</div>
+	<div class="form-group">
+		<label for="pwd">Password:</label>
+		<input type="password" class="form-control" id="emPass" placeholder="Enter password">
+	</div>
+	<div class="checkbox">
+		<label><input type="checkbox">Remember me</label>
+	</div>
+	<button type="submit" class="btn btn-deault" id="suBmit">Submit</button>
+</form>
+</div>
+
+<div id="dialog" title="Welcome to Security">
+	<p>
+		a message from Jim Boutcher 
+		<br />
+		Security. What's that all about anyway? In my mind, it's a freedom from fear and anxiety.
+		When that Great Scientist in the Sky invented us humans, however, he managed to cross a couple of wires. Fear and anxiety aren't conditions most people can free themselves from. They're the two qualities that drive us to action. Why do you go to work every day? Why don't you cheat on your husband or wife? Why do you lighten the pressure on the accelerator every time you pass a cop?
+		<br />
+		Fear of pain. Fear of God. Fear of death. Without fear and anxiety, people wouldn't exist. They'd have no motivation, no will to action.
+		<br />
+		That would be fine and dandy if we were living in some kind of pinko utopia, but wake up brothers and sisters, that's not where we're at. We've got a company to run, families to feed.
+		<br />
+		Now fear and anxiety, left to float around on their own volition, don't make for an effective workplace. It's our job in Internal Security to focus the fears, funnel the anxieties. Make the employees scared of sabotage. Of one other. And most importantly, of us. If we can control their emotions, the ship runs a little smoother, and we're all better off because of it.
+		<br />
+		So take the time to read through these pages. Acquaint yourself with the current projects. Memorize the hot sheet. Maybe find a few suspects of your own.
+		<br />
+		I'll be watching you,
+		<br />
+		Jim
+		
+	</p>
+</div>
+
+
+<div id="security" style="display: none">
+	<h1>Welcome to Security</h1>
+	<div id="letterS">
+		<h2>Keep an eye on these excommunicated employees</h2>
+		<p>Click through the pictures for the full list.</p>
+		<div id="ajayD">
+			<img src="watch/ajay.jpg" id="ajay" name="ajay" />
+			<p>Ajay</p>
+		</div>
+		<div id="dieterD" style="display: none">
+			<img src="watch/dieter.jpg" id="dieter" name="dieter" />
+			<p>Dieter</p>
+		</div>
+		<div id="eddieD" style="display: none">
+			<img src="watch/eddie.jpg" id="eddie" name="eddie" />
+			<p>Eddie</p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
