@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+<!--Name: Alexandra McMorris
+	assignment: P2
+	link: P2/mobile/index.html -->
+
+<meta charset="UTF-8">
+
+<!-- no lie phone -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jurassic Park Lost-World</title>
+
+<!-- jquery, css -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+
+<!-- chrome -->
+<script>
+$(document).bind('mobileinit',function(){
+    
+    $.mobile.pushStateEnabled = false;
+});
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+
+<script>
+	$(document).bind('mobileinit',function(){
+    
+    
+	});
+
+</script>
+
+</head> 
+<body> 
+
+
+<!--Trailer-->
+<div data-role="page" id="page">
+
+	<div data-role="header">
+		<label for="search-basic">Search Input:</label>
+		<input type="search" name="search" id="sea" value="" />
+		<h1>InGen</h1>
+	</div>
+
+	<div data-role="content">
+		<p>Welcome to the IntraNet... Building tomorrow out of yesterday</p>
+		<ul data-role="listview">
+			<li><a href="humans.html" rel="external">Humans</a></li>
+			<li><a href="#trailer">Trailer</a></li>
+			<li data-theme="d"><a href="#systems" data-transition="flip">Systems(Contact)</a></li>
+			<li><a href="dino.html" rel="external">Dinosaurs</a></li>
+		</ul>	
+	</div>
+
+</div>
+
+<div data-role="page" id="trailer" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Lost World Trailer</h1>
+	</div>
+	<div data-role="content">
+		<p>A research team is sent to the Jurassic Park Site B island to study the dinosaurs there while another team approaches with another agenda.</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/2F6riTLfo48" frameborder="0" allowfullscreen></iframe>
+		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<span>Jurassic Park: Lost World</span>
+	</div>
+</div>
+
+
+<!--contact-->
+<div data-role="page" id="systems" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Contact</h1>
+	</div>
+	<div data-role="content">
+    <p>I believe strongly in an open-door policy - please feel free to stop by with questions, concerns or just to chat...</p>
+	<p>
+		James Saunders
+	</p>
+	<p>
+		Vice President, Systems Administration
+	</p>
+    <form action="#" method="post" enctype="multipart/form-data">	
+<div data-role="fieldcontain">
+    <label>Name:<input type="text" name="name" id="name" value=""  /></label><br/>
+    <label>Email:<input type="email" name="email" id="email" value=""  /></label>
+</div>	
+   <div data-role="fieldcontain">
+    <label>Message:<textarea name="textarea" id="textarea-a"></textarea></label>
+
+</div>     
+        <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Send</button>
+    </form>
+        
+        
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<span>Jurassic Park Lost World</span>
+	</div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<!--Name: Alexandra McMorris
+	assignment: P2
+	link: P2/mobile/dino.html -->
+
+<meta charset="UTF-8">
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jurassic Park Lost-World</title>
+
+<!-- REQUIRED JQUERY AND CSS -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+
+<style>
+	div p
+	{
+		background-color: #848484;
+		color: white;
+	}
+
+	
+</style>
+	
+<!-- REQUIRED FOR CHROME (LOCAL TESTING) -->
+<script>
+$(document).bind('mobileinit',function(){
+    
+    $.mobile.pushStateEnabled = false;
+});
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<!--END CHROME -->
+
+
+$(document).bind('mobileinit',function(){
+    
+    
+	});
+
+</head> 
+<body> 
+
+<div data-role="page" id="dino">
+	<div data-role="header">
+    <a href="index.html" data-role="button" data-theme="a" data-icon="arrow-l" rel="external">Back</a>
+		<h1>Human Resources</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+        
+	<ul data-role="listview" data-inset="true" >
+		<li><a href="#brach">Brachiosaurus</a></li>
+		<li><a href="#dilo">Dilophosaurus</a></li>
+		<li><a href="#gall">Gallimimus</a></li>
+		<li><a href="#para">Parasaurs</a></li>
+		<li><a href="#proc">Procompsognathus</a></li>
+		<li><a href="#psitt">Psittavosaurus</a></li>
+		<li><a href="#velo">Velociraptor</a></li>
+	</ul>
+        		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<span>Jurassic Park: Lost World</span>
+	</div>
+</div>
+
+<!--brach-->
+	<div data-role="page" id="brach">
+	<div data-role="header">
+	<a href="#dino" data-role="button" data-theme="a" data-icon="arrow-l" rel="external">Back</a>
+		<h1>Brachiosaurus Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			Distinguished by a remarkably long neck and supported by a tremendously powerful backbone, the Brachiosaurus is often compared to the giraffe largely due to its asymmetrical body design: the front legs are longer than the back, creating a sloping effect that makes the creature look even bigger than its already gargantuan height. The front feet each feature a single claw, while the hind feet each have three. While perhaps intended as defensive measures - as if a healthy Brachiosaurus needed to worry about predators - the claws have proven to fulfill the more curious purpose of gathering food.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#brachInfo" data-rel="dialog">
+		<img src="dinoPic/brach.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+
+	<div data-role="page" id="brachInfo">
+	  <div data-role="header">
+		<h2>Dialog</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 25 meters (82 feet)
+
+		Period: Late Jurassic (156 million to 145 million years ago)
+
+		Place: Colorado, Tanzania
+		</p>
+	  </div>
+	</div>
+	
+	
+<!--Dilo-->	
+	<div data-role="page" id="dilo" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Dilophosaurus Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			One of Jurassic Park's stranger residents, the Dilophosaurus possesses unusually long forelimbs and a disproportionately large (although surprisingly delicate) head. The truly distinguishing feature, however, is the pair of arched crests positioned on top of its head from which multi-colored, almost hypnotic cowls fan out.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#diloInfo" data-rel="dialog">
+		<img src="dinoPic/dilo.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+	 
+	<div data-role="page" id="diloInfo">
+	  <div data-role="header">
+		<h2>General Details</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 6 meters (20 feet)
+		<br/>
+		Period: Early Jurassic (208 million to 194 million years ago)
+		<br/>
+		Place: Arizona
+		</p>
+	  </div>
+	</div>
+	
+<!--gall-->
+	<div data-role="page" id="gall" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Gallimimus Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			Similar in shape to the ostrich, the Gallimimus is Jurassic Park's fastest inhabitant, able to run as fast as 50 miles an hour, thanks to long legs and a relatively light body. It features a long bill and a shovel-like lower jaw.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#gallInfo" data-rel="dialog">
+		<img src="dinoPic/gall.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+	 
+	<div data-role="page" id="gallInfo">
+	  <div data-role="header">
+		<h2>General Details</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 5 meters (17 feet)
+
+		Period: Late Cretaceous (75 million to 70 million years ago)
+
+		Place: Gobi Desert, Mongolia
+		</p>
+	  </div>
+	</div>
+
+	<div data-role="page" id="para" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Parasaurolophus Walker Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			Able to walk on two feet as easily as four, the duckbilled (lambeosaurine) Parasaur is distinguished by its skull crest, an elongated, curved structure longer than the entire skull. This crest contains two hollow tubes, originally believed to be a respiratory device used in similar fashion to a snorkel. However, the true purpose of the tubes turns out to be for the creation of sound. The Parasaur is able to use these tubes to communicate with its fellow herd members through the emission of low-frequency vocal resonances.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#paraInfo" data-rel="dialog">
+		<img src="dinoPic/para.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+	 
+	<div data-role="page" id="paraInfo">
+	  <div data-role="header">
+		<h2>General Details</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 9 meters (30 feet)
+
+		Period: Late Cretaceous (76 million to 65 million years ago)
+
+		Place: Alberta, Utah, New Mexico
+		</p>
+	  </div>
+	</div>
+	
+	
+	<div data-role="page" id="proc" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Compsognathus Longipes Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			The smallest dinosaur in Jurassic Park has proven to be a fierce predator, thanks to a long neck, powerfully-clawed fingers, and massive upper legbones, enabling it to reach surprisingly fast speeds. Feet are also clawed, used to grasp prey.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#procInfo" data-rel="dialog">
+		<img src="dinoPic/proc.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+	 
+	<div data-role="page" id="procInfo">
+	  <div data-role="header">
+		<h2>General Details</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 1 meter (40 inches)
+
+		Period: Late Jurassic (156 million to 145 million years ago)
+
+		Place: Germany, France
+		</p>
+	  </div>
+	</div>
+	
+	
+	
+	<div data-role="page" id="psitt" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Psittacosaurus Mongliensis Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			One of the early Ceratopians (the family of horned creatures which later evolved to include the more popular Triceratops), these "old-timers" have won a special place in the hearts of the visitors. These two-legged runners feature a square skull and a powerful (albeit toothless) "beak." The Psittacosaurus can make limited use of its four-fingered hands, especially where gathering food is concerned.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#psittInfo" data-rel="dialog">
+		<img src="dinoPic/psitt.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+	 
+	<div data-role="page" id="psittInfo">
+	  <div data-role="header">
+		<h2>General Details</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 2 meters (7 feet)
+
+		Period: Early Cretaceous (119 million to 97.5 million years ago)
+
+		Place: Mongolia, China, Thailand
+		</p>
+	  </div>
+	</div>
+
+	
+<div data-role="page" id="velo" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Velociraptor Info</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+			A swift predator with long claws and sharp teeth, the "Raptor" was originally intended as dinner for the more popular Tyrannosaur. While its larger counterpart has adopted a more sedentary lifestyle, however, the flat-snouted Raptor has grabbed the limelight. With surprising smarts, disproportionately large eyes and a love of the hunt, this beast has both amazed and terrified the Park's visitors.<b> CLICK ON THE PICTURE FOR MORE INFORMATION.</b>
+		</p>
+		<a href="#veloInfo" data-rel="dialog" data-transition="flip">
+		<img src="dinoPic/velo.jpg"></a>
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+			<span>Jurassic Park: Lost World</span>
+		</div>
+	</div>
+	 
+	<div data-role="page" id="veloInfo">
+	  <div data-role="header">
+		<h2>General Details</h2>
+	  </div>
+	  <div role="main" class="ui-content">
+		<p>
+		Size: 2 meters (7 feet)
+
+		Period: Late Cretaceous and early Campanian (85 million to 80 million years ago)
+
+		Place: Mongolia, China, Russia
+		</p>
+	  </div>
+	</div>
+	
+	
+	
+
+
+
+
+</body>
+</html>

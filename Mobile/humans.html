@@ -1,0 +1,200 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<!--Name: Alexandra McMorris
+	assignment: P2
+	link: P2/mobile/index.html -->
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humans</title>
+
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+
+
+<script>
+$(document).bind('mobileinit',function(){
+    
+    $.mobile.pushStateEnabled = false;
+});
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="humans">
+	<div data-role="header">
+    <a href="index.html" data-role="button" data-theme="a" data-icon="arrow-l" rel="external">Back</a>
+		<h1>Human Resources</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <p>
+		Welcome to InGen, where we are building the future out of the pieces of yesterday. We hope that you will find your experience here to be challenging, stimulating and personally rewarding.
+	</p>
+	<p>
+		Please take the time to acquaint yourself with the contents of the Employee Handbook. It is your most valuable resource at InGen, covering all the bases from benefits to emergency procedures. If you have any further questions, please do not hesitate to ask your supervisor, or contact Maria Dillinger.
+	</p>
+	<p>
+		Here's to a successful working relationship,
+	</p>
+	<p>
+		Melissa Shenkin<br />
+		Vice President
+	</p>
+        
+	<ul data-role="listview" data-inset="true" >
+		<li><a href="#emHa">Employee HandBook</a></li>
+		<li><a href="#lost">Lost and Found</a></li>
+	</ul>
+        		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<span>Jurassic Park: Lost World</span>
+	</div>
+</div>
+</div>
+
+
+
+<div data-role="page" data-theme="a" id="emHa" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Symphony</h1>
+	</div><!-- end header -->
+	<div data-role="content" >
+		<h2>InGen Employee Handbook</h2>	
+	<div class="ui-grid-a" data-role="collapsible" data-collapsed="false" data-collapsed-icon="arrow-l">
+		
+
+			<div data-role="collapsible">
+			<h3>Introduction to InGen</h3>
+				<p>
+				International Genetics Technologies was founded by John Hammond in 1985 as a vehicle for pursuing his lifelong dream: the chance to create living, breathing dinosaurs out of partially-preserved DNA samples.
+				</p>
+				<p>
+				After some initial research in Palo Alto and Costa Rica, InGen lost its foreign backers due to a series of (unspecified) incidents. Universal Studios, however, came to the struggling corporation's rescue, entering into a joint venture to create a brand-new attraction.
+				</p>
+				<p>
+				Only a few short years later, the highly successful venture has resulted in Jurassic Park, the most amazing entertainment attraction on earth. Visitors are able to mingle with a variety of animals who had not walked this planet in hundreds of millions of years.
+				</p>
+			</div>
+	
+			<div data-role="collapsible">
+				<h3>The Structure</h3>
+					<p>
+					The business of operating the attraction is run from the InGen building, located at Jurassic Park's southern entrance.
+					</p>
+					<p>
+					InGen is divided into four divisions, each managed by a Vice President. Each Vice President reports to Dr. Hammond, who serves as President and Chief Executive Officer. There is also a Chief Financial Officer, who is responsible for overseeing financial activity within each division.
+					</p>
+					<p>
+					The four divisions are: Human Resources, Marketing, Security and Systems Administration.
+					</p>
+			</div>
+			<div data-role="collapsible">
+			<h3>Administration</h3>
+				<p>
+				Employees are regulated by the Human Resources division and administered by the individual divisions. Each employee reports to a supervisor, responsible for directing his/her work and for seeing that InGen's employment policies affect that employee fairly and impartially. Each supervisor reports, directly or through a chain of command, to a Vice President.
+				</p>
+			</div>
+	
+			<div data-role="collapsible">
+				<h3>A Wealth of Diversity</h3>
+					<p>
+					No two jobs at InGen are exactly alike, nor are any two employees. You have a unique contribution to make to the continuing accomplishments of this dynamic corporation.
+					</p>
+					<p>
+					We value your training, education and life experience as well as your individual skill set, dedication, and, most of all, enthusiasm. We look forward to your role in the continued growth and success of Jurassic Park.
+					</p>
+			</div>
+			<div data-role="collapsible">
+				<h3>Drug and Weapon-free Workplace</h3>
+					<p>
+					InGen and Jurassic Park are proud to comply with state and federal law as a drug-free zone. Please refer to the latest drug classification table for more details.
+					</p>
+					<p>
+					In compliance with Universal Studios Hollywood policy, InGen is also a weapons-free zone.
+					</p>
+			</div>
+			<div data-role="collapsible">
+			<h3>Affirmative Action/Nondiscrimination Policy</h3>
+				<p>
+				InGen will not discriminate against any person because of race, color, religion, sex, national origin, ancestry, genetic makeup, age, sexual orientation, athletic ability, chromosome deficiency, marital status, disability, height, weight, eye color, hair color, unfavorable discharge from the military, or status as a disabled veteran or a veteran of the Vietnam era.
+				</p>
+			</div>
+	
+			<div data-role="collapsible">
+				<h3>Conflict of Interest</h3>
+					<p>
+					InGen encourages its employees to pursue an active and engaging life outside of work.
+					</p>
+					<p>
+					Due to the delicate nature of the work you will be doing, we kindly request that you do not engage in activities on or off the job that conflict with your hours of work, your job performance, or that might reasonably be considered to be in conflict with your obligations and responsibilities.
+					</p>
+					<p>
+					Any questions about whether an activity constitutes a conflict of interest should be directed towards Jim Boutcher, Director of Security.
+					</p>
+			</div>
+	
+		
+        <div class="ui-block-b">
+        </div>
+	</div>
+
+
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Jurassic Park Lost-World</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+<div data-role="page" data-theme="a" id="lost" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Humans</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+		<h2>Lost and Found</h2>	
+	<div class="ui-grid-a" data-role="collapsible" data-collapsed="false" data-collapsed-icon="arrow-l">
+		
+
+			<div data-role="collapsible">
+			<h3>Lost</h3>
+				<p>
+				Spanner wrench used to raise and lower Catwalk - contact Ted Garvey.
+				</p>
+			</div>
+			<div data-role="collapsible">
+			<h3>Found</h3>
+				<p>
+				Roll of rare Indian Head nickels - contact Kevin Davis.
+				</p>
+			</div>
+
+		
+        <div class="ui-block-b">
+        </div>
+	</div>
+
+
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Jurassic Park Lost-World</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+</body>
+</html>
