@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/humans.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/trontastic/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link href="P2.css" rel="stylesheet" type="text/css" />
+
+<script>
+$(document).ready(function()
+{	//top menu display
+	$("#topM").menu();	
+				 
+	$( "#sideMenu" ).hover(function() {
+		$( "#sideMenu h3" ).animate({
+		color: "green",
+		backgroundColor: "black"
+		});
+		});
+	$("#tabs").tabs();
+	$("#handBook").accordion();
+	
+});	
+</script>
+
+</head>
+<body>
+
+<div id="menu">
+
+<ul id="topM">
+
+	<li class="topMenu">
+		<a href="humans.html">HUMANS</a>
+		<ul>
+			<li><a href="#handBook">Employee HandBook</a></li>
+			<li><a href="#lost">Lost and Found</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+	<a href="marketing.html">MARKETING</a>
+		<ul>
+			<li><a href="marketing.html#deve">Development</a></li>
+			<li><a href="marketing.html#proposal">Preliminary Plans</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+		<a href="security.html">SECURITY</a>
+		</li>
+	
+	<li class="topMenu">
+		<a href="systems.html">SYSTEMS</a>
+	</li>
+	
+	<li class="topMenu">
+	<a href="dinosaurs.html">DINOSAURS</a>
+		<ul>
+			<li><a href="dinosaurs.html#brachInfo">Brachiosaurus</a></li>
+			<li><a href="dinosaurs.html#diloInfo">Dilophosaurus</a></li>
+			<li><a href="dinosaurs.html#gallInfo">Gallimimus</a></li>
+			<li><a href="dinosaurs.html#paraInfo">Parasaurs</a></li>
+			<li><a href="dinosaurs.html#procInfo">Procompsognathus</a></li>
+			<li><a href="dinosaurs.html#puttInfo">Puttacosaurus</a></li>
+			<li><a href="dinosaurs.html#tricInfo">Triceratops</a></li>
+			<li><a href="dinosaurs.html#tyranInfo">Tyrannosaurus Rex</a></li>
+			<li><a href="dinosaurs.html#veloInfo">Velociraptor</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+
+<div id="sideMenu">
+	<h3>I</h3>
+	<h3>N</h3>
+	<h3>T</h3>
+	<h3>R</h3>
+	<h3>A</h3>
+	<h3>N</h3>
+	<h3>E</h3>
+	<h3>T</h3>
+	<h3><a href="index.html">HOME</a></h3>
+</div>
+
+
+
+	<h1>Human Resources</h1>
+	
+<div id="letter">
+	
+	<p>
+		"Welcome to InGen, where we are building the future out of the pieces of
+		yesterday. We hope that you will find your experience here to be challenging, 
+		stimulating and personally rewarding.
+	</p>
+	<p>
+		Please take the time to acquaint yourself with the contents of the Employee 
+		Handbook. It is your most valuable resource at InGen, covering all the bases 
+		from benefits to emergency procedures. It you have any further questions, 
+		please do not hesitate to ask your supervisor, or contact Maria Dillinger."
+	</p>
+
+	<p>
+		Here's to a successful working relationship,
+	</p>
+	<p>
+		<b><i>Melissa Shenkin<i></b>
+		</br>
+		Vice President
+	</p>
+
+</div>	
+
+<div id="tabs">
+         <ul>
+            <li><a href="#emHand">Employee Handbook</a></li>
+            <li><a href="#lost">Lost and Found</a></li>
+         </ul>
+         <div id="emHand">
+			<div id="handBook">
+				<h3><a href="#" id="intro">Introduction to InGen</a></h3>
+			  
+				<div>
+					<p>International Genetics Technologies was founded by John Hammond in 1985 as a vehicle for pursuing his lifelong dream: the chance to create living, breathing dinosaurs out of partially-preserved DNA samples.
+					</p>
+					<p>
+						After some initial research in Palo Alto and Costa Rica, InGen lost its foreign backers due to a series of (unspecified) incidents. Universal Studios, however, came to the struggling corporation's rescue, entering into a joint venture to create a brand-new attraction.
+					</p>
+					<p>
+						Only a few short years later, the highly successful venture has resulted in Jurassic Park, the most amazing entertainment attraction on earth. Visitors are able to mingle with a variety of animals who had not walked this planet in hundreds of millions of years.
+					</br>
+					</p>
+					<h3>
+						The Structure
+					</h3>
+					<p>
+						The business of operating the attraction is run from the InGen building, located at Jurassic Park's southern entrance.
+					</p>
+					<p>
+						InGen is divided into four divisions, each managed by a Vice President. Each Vice President reports to Dr. Hammond, who serves as President and Chief Executive Officer. There is also a Chief Financial Officer, who is responsible for overseeing financial activity within each division.
+					</p>
+					<p>
+						The four divisions are: Human Resources, Marketing, Security and Systems Administration.
+					</p>
+					<h3>
+						Administration
+					</h3>
+					<p>
+						Employees are regulated by the Human Resources division and administered by the individual divisions. Each employee reports to a supervisor, responsible for directing his/her work and for seeing that InGen's employment policies affect that employee fairly and impartially. Each supervisor reports, directly or through a chain of command, to a Vice President.
+					</p>
+					<h3>
+						A Wealth of Diversity
+					</h3>
+					<p>
+						No two jobs at InGen are exactly alike, nor are any two employees. You have a unique contribution to make to the continuing accomplishments of this dynamic corporation.
+					</p>
+					<p>
+						We value your training, education and life experience as well as your individual skill set, dedication, and, most of all, enthusiasm. We look forward to your role in the continued growth and success of Jurassic Park.
+					</p>
+					<h3>
+						Drug and Weapon-free Workplace
+					</h3>
+					<p>
+						InGen and Jurassic Park are proud to comply with state and federal law as a drug-free zone. Please refer to the latest drug classification table for more details.
+					</p>
+					<p>
+						In compliance with Universal Studios Hollywood policy, InGen is also a weapons-free zone.
+					</p>
+					<h3>
+						Affirmative Action/Nondiscrimination Policy
+					</h3>
+					<p>
+						InGen will not discriminate against any person because of race, color, religion, sex, national origin, ancestry, genetic makeup, age, sexual orientation, athletic ability, chromosome deficiency, marital status, disability, height, weight, eye color, hair color, unfavorable discharge from the military, or status as a disabled veteran or a veteran of the Vietnam era.
+					</p>
+					<h3>
+						Conflict of Interest
+					</h3>
+					<p>
+						InGen encourages its employees to pursue an active and engaging life outside of work.
+					</p>
+						Due to the delicate nature of the work you will be doing, we kindly request that you do not engage in activities on or off the job that conflict with your hours of work, your job performance, or that might reasonably be considered to be in conflict with your obligations and responsibilities.
+					</p>
+						Any questions about whether an activity constitutes a conflict of interest should be directed towards Jim Boutcher, Director of Security.
+					</p>
+			   </div>
+				
+			   <h3><a href="#" id="job">You and Your Job</a></h3>
+			   <div>
+				<p>While each employee will have a specific set of duties, all employees are subject to a common set of goals and obligations. If you know of a fellow employee who is/has been/might be in violation of one or more of these tenets, or if you are/have been/might be in violation of one or more of these tenets, please do not hesitate to report such incident to Security.
+				</p>
+				<p>	
+					Effective use of time. Because at InGen, we understand that life offers only one certainty: Here today, extinct tomorrow.
+				</p>
+				<p>
+					Utter compliance with InGen's non-disclosure and confidentiality policies. This includes the reporting of all suspicious persons or incidents as well as any and all violations, confirmed or otherwise, to Security.
+				</p>
+				<p>
+					Friendliness, courtesy and respect to man and beast, whether co-worker, park visitor or dinosaur.
+				</p>
+				<p>
+					Regular attendance. InGen employees are not tardy, do not abuse sick leave, lunch periods or breaks.
+				</p>
+				<p>
+					To work when you are supposed to be working, and to perform the job you are supposed to be performing. While InGen will never condone a violation of this policy, it is understood that in certain emergency situations, an employee might be forced to perform the job of an absent colleague. For example, he/she might put out a small fire him/herself instead of waiting for Security forces to arrive. While it is doubtful that the said employee would be reprimanded for such a violation, it is generally safest to check with a supervisor first.
+				</p>
+				<p>
+					Observance of all safety and security policies as dictated. When appropriate, please observe the instructions issued by the computer-generated voice. Please see the Emergency Procedures section for more information.
+				</p>
+				<p>
+					Proper use of and respect towards InGen property. This includes, but is not limited to: safe handling of dangerous materials; appropriate (i.e., job-related) use only of facilities.
+				</p>
+				<p>
+					Keeping an eye out for cost-saving and labor-saving approaches to your assignments and to report them to your supervisor.
+				</p> 
+			   </div>
+			   
+			   <h3><a href="#" id="problem">Problems on the Job: Prevention and Resolution</a></h3>
+			   <div>
+				<p>
+					At InGen, we have one basic rule: Play nice, or else. Problems on the job don't only affect you, but your co-workers as well. InGen seeks to avoid problems by laying out the rules in a clear-cut manner. Failure to abide by these rules will result in suspension and possible dismissal, based upon the findings of an ad hoc committee consisting of (but not limited to) your immediate superior, his/her immediate superior and a representative from Security.
+					</p>
+					<h3>Causes justifying suspension</h3>
+					<p>
+						Unauthorized absences.
+						Habitual lateness.
+						Insolence.
+						Petty jealousy.
+						Recurring lack of fashion sense.
+						Unsightly facial hair.
+						Safety violations.
+						Careless workmanship resulting in spoilage, waste, or delay.
+						Antisocial behavior, including excessive drama or overabundant angst.
+						Unauthorized use of institutional property.
+						Gambling on institutional property.
+						Creating or contributing to unsanitary conditions.
+						Horseplay or scuffling.
+						Sleeping during working hours.
+						"Loafing on the job."
+					</p>
+					<h3>Causes justifying discharge</h3>
+					<p>
+						All those listed above as cause for suspension if they become recurring offenses.
+						Unauthorized possession of access codes or restricted information.
+						Theft.
+						Recurring bitterness.
+						Inappropriate disclosure of pertinent information, whether classified or not.
+						Inability to perform satisfactorily assigned duties as a result of drinking alcoholic beverages.
+						Immoral or indecent conduct that violates common decency or morality.
+						Conviction of an offense involving moral turpitude.
+					</p>
+			   </div>
+			   
+			   <h3><a href="#" id="additional">Additional Employment Policies</a></h3>
+			   <div>
+				<h3>Confidentiality</h3>
+				<p>
+					Nearly all of InGen's employees have access to confidential information of one kind or another. Per the coordinated efforts of the company's various divisions, this information is usually quarantined from one individual to the next, communicated on a need-to-know basis.
+				</p>
+				<p>
+					A simple rule to keep in mind: If a co-worker claims to know what you are working on, he or she is probably lying. Please report any such incidents to your immediate supervisor. If your immediate supervisor is the individual responsible for the breach in question, please report the incident directly to Internal Security.
+				</p>
+				
+						<h3>Telephone Calls</h3>
+				<p>
+					As personal calls are generally prohibited during working hours and inter-employee communication best effected via the IntraNet and interoffice memos, all telephones have been removed from the building. In the event of an emergency, employees are urged to exit the complex and use the pay phone located at the gas station across the street.
+				</p>
+					<h3>ID Cards</h3>
+				<p>
+					Each employee will be issued an ID card, bearing his/her access code to the IntraNet. Lost cards should be reported immediately to Internal Security.
+				</p>
+				
+					<h3>Political Activities</h3>
+				<p>
+					InGen employees are prohibited from soliciting political contributions from co-workers, from soliciting political contributions on the job, from taking any job-related action on the basis of political activity, affiliation, or contribution or absence thereof, and from participating in political activities when scheduled for work.
+				</p>
+				<p>
+					"Political Activities" include affiliations with political parties, whether recognized or unrecognized; membership in cults or fringe groups; and/or ties to organized crime or extended families of any sort.
+				</p>
+					<h3>Dress Code</h3>
+				<p>
+					While we hardly require formal attire, employees are expected to put their best foot forward. No ripped clothing, no sneakers or athletic garb, nothing featuring licensed characters from entities other than Universal Studios.
+				</p>
+					<h3>Kitchen Privileges</h3>
+				<p>
+					The Kitchen is open during all operating hours to any employee. Please clean up after yourself. Be especially careful near the stove, as the smoke alarm is supplemented with a Halon Gas System (see Emergency Procedures for more information).
+				</p> 
+			   </div>
+			   
+			    <h3><a href="#" id="benefits">Employee Benefits</a></h3>
+			   <div>
+				<h3>Child Care</h3>
+
+				<p>
+					In our ongoing commitment to the InGen family, we are planning to build a Daycare Facility next to the Hatchery. Construction begins next week. (Contact: Steve Hyland, Employee Relations)
+				</br>
+					Paid maternity and paternity leave can be arranged, as long as it is at least two months in advance. (Contact: Maria Dillinger, Personnel Director)
+				</p>
+				<h3>Financial Planning</h3>
+				<p>
+					InGen offers both 401K and Individual Retirement Accounts to each of its employees. (Contact: Maria Dillinger or your immediate supervisor)
+					</br>
+					In addition, Dr. Stephen Jackson (Dinosaur Control) conducts weekly after-hours meetings of "The Richest Man in Calabassas Society," devoted to creating and maintaining an lifelong financial plan. Membership is limited and may or may not involve a fee.
+				</p>
+				<h3>Insurance</h3>
+				<p>
+					Part of your overall compensation as an InGen employee is the contribution to all or part of a number of insurance programs. The basic plan includes health, dental and life. However, there are a few caveats specific to the working environment at InGen.
+				</p>
+				<p>
+					While on-the-job accidents are covered where required by law, injuries and/or death sustained from encounters with dinosaurs are generally considered to be force majeure, thus falling outside the provisions of the InGen insurance plan. Supplemental insurance designed to cover such contingencies is available at employee cost.
+				</p>
+				<p>
+					In regards to one of the most frequently asked questions, most forms of euthanasia do fall under the health insurance plan. However, an employee who chooses to die in this manner may fail to meet the criteria set forth in the life insurance plan. Death is serious business - be sure to consult with a financial advisor first.
+				</p>
+				<p>
+				Under no circumstances are post-mortem brain removal/cryogenic storage procedures covered by any of InGen's policies.
+				</p> 
+			   </div>
+			   
+			    <h3><a href="#" id="emergency">Emergency Procedures</a></h3>
+			   <div>
+				<p>An emergency situation, when monitored by ASYA (Automatic SYstems Analysis), will be signaled by a warning klaxon. An automated female voice will describe the nature of the situation and issue specific instructions.
+				</p>
+				<p>
+					What should I do?
+				</p>
+				<p>
+					Due to the potentially volatile nature of Jurassic Park, all emergency procedures are to be taken very seriously. In the event of an actual emergency situation, responsibility for Jurassic Park falls into the hands of the Director of Operations, who is to remain on site until the situation can be rectified.
+				</p>
+				<p>
+					What is an emergency, anyway?
+				</p>
+				<p>
+					An emergency is generally defined as an unforeseen combination of circumstances requiring immediate action. Some examples include:
+				</p>
+				<p>
+					Power Outages. Generally, these result from an overload of some sort. The breaker switch for the complex is located in the Power Room on Level One.
+				</p>
+				<p>
+					Fire. InGen is equipped with a state-of-the-art Halon Gas System (HGS) that, in the event of fire, will remove all of the oxygen from the room, effectively snuffing the flame. A warning will be issued before the gas is emitted. In the unlikely event that a person is in the room at the same time, he or she should immediately look for the override switch, usually located in an adjacent corridor.
+				</p>
+				<p>
+					Escaped Dinosaurs. In the unlikely event of an escaped dinosaur, all employees should immediately evacuate, as the complex will be sealed. The Director of Operations is responsible for remaining behind to immobilize (or, in extreme cases, terminate) the fugitive animal.
+				</p>
+				<p>
+					Enemy Invasion. In cases of enemy invasion, responsibility for the Park falls into the hands of Security, who will manage the situation until proper police or military officials can be summoned.
+				</p>
+				<p>
+					Viral Infection. Due to the delicate balance of Jurassic Park, even the slightest potential of contagion must be handled with utmost care. In the event of a suspected virus, the Complex will be quarantined and sealed. Employees should await further instructions which will be forthcoming.
+				</p> 
+			   </div>
+			   
+			</div> 
+		</div>
+        <div id="lost">
+			<b>Lost</b>
+			<p>
+				Spanner wrench used to raise and lower Catwalk - contact Ted Garvey.
+			</p>
+				<b>Found</b>
+			<p>
+				Roll of rare Indian Head nickels - contact Kevin Davis.
+			</p>
+        </div>
+    </div>
+
+
+
+
+<footer id="copyRight">
+	<p>I acknowledge that the material above is quoted from the original website
+		and not mine. Whereas the coding is my original.</br>
+		It is being used for purely educational/nonprofit/noncomercial purposes.</p>
+	
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/marketing.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/trontastic/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link href="P2.css" rel="stylesheet" type="text/css" />
+
+<style>
+	#mark
+	{
+		margin-left: 150px;
+	}
+
+	#dateEvents
+	{
+		margin-left: 150px;
+		padding: 25px;
+	}
+	#displayEvents
+	{
+		float: right;
+		margin-right: 150px;
+		background-color: #323331;
+		color: #54e810;
+		width: 500px;
+		height: 300px;
+	}
+	
+	.modal
+	{
+		display: none;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: black;
+		background-color: rgba(0,0,0,0.9);
+	}
+	
+	.modal-content
+	{
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 700px;
+	}
+	
+	#cap
+	{
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 700px;
+		text-align: center;
+		color: #dcedd5;
+		padding: 10px 0;
+		height: 150px;
+	}
+	
+	.close
+	{
+		position: absolute;
+		top: 15px;
+		right: 35px;
+		color: white;
+		font-size: 35px;
+		font-weight: bold;
+	}
+	
+	.close:hover
+	{
+		color: #bac4b6;
+		text-decoration: none;
+	}
+	
+	table
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h2
+	{
+		text-align: center;
+	}
+	
+</style>
+
+<script>
+$(document).ready(function()
+{	//top menu display
+	$("#topM").menu();	
+	//side menu display			 
+	$( "#sideMenu" ).hover(function() {
+		$( "#sideMenu h3" ).animate({
+		color: "green",
+		backgroundColor: "black"
+		});
+		});
+
+	$('#mark').accordion();
+	
+	$('#showTruck').click(function(){
+		$('#dinoTruck').toggle("clip");
+	
+	});
+	
+	//events for the calender
+	var events = [
+		{Title: "Meet the Dinosaurs!", Date: new Date("12/12/2016")},
+		{Title: "Egg Exhibit opens to the public", Date: new Date("12/13/2016")},
+		{Title: "Herbology Class, starts at 10 a.m.", Date: new Date("12/14/2016")},
+		{Title: "Trained Dinosaur Show", Date: new Date("12/15/2016")}
+	];
+	
+	//calender and events display
+	$("#dateEvents").datepicker({
+		beforeShowDay : function(date){
+			var result = [true, '', null];
+			var matching = $.grep(events, function(event) {
+				return event.Date.valueOf() === date.valueOf();
+			});
+			
+			if(matching.length){
+				result = [true, 'highlight', null];
+			}
+			return result;	
+		},
+		onSelect: function(dateText){
+			var date,
+			selectedDate = new Date(dateText),
+			i = 0,
+			event = null;
+			
+			while (i < events.length && !event) {
+				date = events[i].Date;
+				
+				if(selectedDate.valueOf() === date.valueOf()){
+					event = events[i];
+				}
+				i++;
+			}
+			if (event) {
+				$("#displayEvents").append(dateText + ": ");
+				$("#displayEvents").append(event.Title + "<br />");
+			}
+		}
+	
+	});
+	
+	$("#dinoTruck").click(function(){
+		$(".modal").show(),
+		$("#dinoPop").append("#dinoTruck")
+	});
+	
+	$(".close").click(function(){
+		$(".modal").hide();
+	});
+	
+	
+	
+	
+});	
+</script>
+
+</head>
+<body>
+<div id="menu">
+
+<ul id="topM">
+
+	<li class="topMenu">
+		<a href="humans.html">HUMANS</a>
+		<ul>
+			<li><a href="humans.html#handBook">Employee HandBook</a></li>
+			<li><a href="humans.html#lost">Lost and Found</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+	<a href="marketing.html">MARKETING</a>
+		<ul>
+			<li><a href="#deve">Development</a></li>
+			<li><a href="#proposal">Preliminary Plans</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+		<a href="security.html">SECURITY</a>
+		</li>
+	
+	<li class="topMenu">
+		<a href="systems.html">SYSTEMS</a>
+	</li>
+	
+	<li class="topMenu">
+	<a href="dinosaurs.html">DINOSAURS</a>
+		<ul>
+			<li><a href="dinosaurs.html#brachInfo">Brachiosaurus</a></li>
+			<li><a href="dinosaurs.html#diloInfo">Dilophosaurus</a></li>
+			<li><a href="dinosaurs.html#gallInfo">Gallimimus</a></li>
+			<li><a href="dinosaurs.html#paraInfo">Parasaurs</a></li>
+			<li><a href="dinosaurs.html#procInfo">Procompsognathus</a></li>
+			<li><a href="dinosaurs.html#puttInfo">Puttacosaurus</a></li>
+			<li><a href="dinosaurs.html#tricInfo">Triceratops</a></li>
+			<li><a href="dinosaurs.html#tyranInfo">Tyrannosaurus Rex</a></li>
+			<li><a href="dinosaurs.html#veloInfo">Velociraptor</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+
+<div id="sideMenu">
+	<h3>I</h3>
+	<h3>N</h3>
+	<h3>T</h3>
+	<h3>R</h3>
+	<h3>A</h3>
+	<h3>N</h3>
+	<h3>E</h3>
+	<h3>T</h3>
+	<h3><a href="index.html">HOME</a></h3>
+</div>
+
+
+
+
+<h1>Welcome to <i>MARKETING</i></h1>
+
+<div id="mark">
+
+
+<h3><a href="#" id="deve">Development</a></h3>
+  
+  <div>
+	<p>
+	Kudos to Megan Odell, whose brilliant ad campaign has carried those stuffed Compsognathus dolls all the way to the bank. The "Kompy Kids" have proven to be very popular overseas, especially in France, where they can't seem to get enough of these plush, furry creatures. Talk about les enfants terrible!
+</p>
+<p>
+	"Psittacosaurus Day," where senior citizens received free admission to the Park (and only half-price for their grandkids!), turned out to be a major success. The sight of our elderly visitors mingling with nature's oldest creatures brought a tear to eye of everyone who was lucky enough to see it.
+</p>
+<p>
+	Don't forget that the latest installment of Parasaur Parade hits music stores next week. The new CD teams Jurassic Park's most melodious resident with the London Symphony Orchestra. The unlikely combination blaze through a number of popular standards. Advance buzz pegs their version of Nessun Dorma as a real showstopper!
+</p>
+<p>
+	Last but certainly not least, the results are in...and they're great! Early tests of Dilophosaur! The Chewing Gum have met with amazing results. For those of you not acquainted with the product, this flavorful chewing gum will allow kids to spit in all the colors of the rainbow. Bravo to the folks in R&D for what will surely be this winter's hottest stocking stuffer!
+</p>
+
+   </div>
+	
+   <h3><a href="#" id="proposal">Request for Proposal</a></h3>
+   <div>
+	<p>
+		Thanks to quick and decisive action by the InGen board of directors, the day has come that we've all been waiting for. It is time to harvest the significant productive assets that we have attempted to hide, at great expense, when we could have safely displayed them for profit. Enormous profit!
+	</p>
+	<p>
+		I've always said we have the best marketing team around (the fact you've been able to keep us afloat for the past four years is proof of that), and now you have a chance to show what you can really do.
+	</p>
+	<p>
+		The InGen waterfront complex will be completed and ready to receive visitors in less than a month. The animals are fully developed; the round up team leaves tomorrow for Site B; 
+		<input type="button" id="showTruck" value="specially-equipped transport trucks"/>
+		<img src="dinoTruck.jpg" id="dinoTruck" style="width:25%;display:none"/>
+		 are currently being road-tested.Your job to see to it that the amphitheater is completely sold out on opening day. See below for special events occuring within to first week.
+	</p>
+	<p>
+		To that end, I want a detailed marketing plan and budget on my desk by the end of the day. Think big. This has to be the biggest grand opening in history!
+	</p>
+	<p>
+		I look forward to receiving your proposal,
+	</p>
+	<p><br />
+		Peter Ludlow
+	</p>
+   </div>
+
+</div>
+
+<div id="modal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="dinoPop" src="pics/dinoTruck.jpg"/>
+		<div id="cap"></div>
+		</div>
+
+
+
+	<table>
+	<tr>
+		<td>
+			<div id="dateEvents">
+
+			</div>
+		</td>
+		<td>
+			<div id="displayEvents">
+				<h2>Upcoming Events</h2>	
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+<footer id="copyRight">
+	<p>I acknowledge that the material above is quoted from the original website
+		and not mine. Whereas the coding is my original.</br>
+		It is being used for purely educational/nonprofit/noncomercial purposes.</p>
+	
+</footer>
+
+</body>
+</html>

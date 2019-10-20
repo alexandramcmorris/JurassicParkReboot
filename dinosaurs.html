@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/humans.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/trontastic/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link href="P2.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+	table
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ui-widget-header 
+	{
+		width: 200px;
+		height: 200px;
+        background:black;
+        border: 1px solid #b9cd6d;
+        color: white;
+        font-weight: bold;
+    }
+
+        .active 
+		{
+            background : #332c2c;
+        }  
+
+        .hover 
+		{
+            background-color: green;
+	    }
+
+        .resultarea {
+            color: purple;
+            font-size:14px;
+         }
+	img
+	{
+		width: 150px;
+		padding: 0.5em;
+	}
+	table th
+	{
+		font-size: 22pt;
+		text-align: center;
+		color: #18d104;
+		background-color: #eaff66;
+	}
+	
+	#dinoInfo
+	{
+		margin-left: 125px;
+		color: #72e83c;
+		background-color: #323331;
+	}
+	
+	#dinoInfo b
+	{
+		font-size: 1.5em;
+	}
+	#dinoInfo p
+	{
+		font-size: 1em;
+		padding: 10px;
+	}
+	
+
+</style>
+
+<script>
+
+$(document).ready(function()
+{	//top menu display
+	$("#topM").menu();	
+				 
+	$( "#sideMenu" ).hover(function() {
+		$( "#sideMenu h3" ).animate({
+		color: "green",
+		backgroundColor: "black"
+		});
+		});
+	
+	
+	//set pictures to drag
+	$('#psitt').draggable({
+		revert: true
+		});
+	$('#tyran').draggable({
+		revert: true
+		});
+	$('#brach').draggable({
+		revert: true
+		});
+	$('#tric').draggable({
+		revert: true
+		});
+	$('#gall').draggable({
+		revert: true
+		});
+	$('#dilo').draggable({
+		revert: true
+		});
+	$('#velo').draggable({
+		revert: true
+		});
+	$('#para').draggable({
+		revert: true
+		});
+	$('#proc').draggable({
+		revert: true
+		});
+	
+	//set correct area to drop, if doesn't match returns to original spot
+	$('#dropBrach').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#brach',
+		drop: afterDrop
+	});
+	
+	$('#dropDilo').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#dilo',
+		drop: afterDrop
+	});
+	
+	$('#dropGall').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#gall',
+		drop: afterDrop
+	});
+	$('#dropPara').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#para',
+		drop: afterDrop
+	});
+	$('#dropProc').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#proc',
+		drop: afterDrop
+	});
+	$('#dropPsitt').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#psitt',
+		drop: afterDrop
+	});
+	$('#dropTric').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#tric',
+		drop: afterDrop
+	});
+	$('#dropTyra').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#tyran',
+		drop: afterDrop
+	});
+	$('#dropVelo').droppable({
+		activeClass: 'active',
+		hoverClass: 'hover',
+		accept: '#velo',
+		drop: afterDrop
+	});
+	
+	
+	function afterDrop(event, ui)
+	{
+		ui.draggable.addClass('correct');
+		ui.draggable.draggable('disable');
+		$(this).droppable('disable');
+		ui.draggable.position({
+			of: $(this),
+			my: 'left top',
+			at: 'left top'
+		});
+	}
+	
+});	
+</script>
+
+</head>
+<body>
+<div id="menu">
+
+<ul id="topM">
+
+	<li class="topMenu">
+		<a href="humans.html">HUMANS</a>
+		<ul>
+			<li><a href="humans.html#handBook">Employee HandBook</a></li>
+			<li><a href="humans.html#lost">Lost and Found</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+	<a href="marketing.html">MARKETING</a>
+		<ul>
+			<li><a href="marketing.html#deve">Development</a></li>
+			<li><a href="marketing.html#proposal">Preliminary Plans</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+		<a href="security.html">SECURITY</a>
+		</li>
+	
+	<li class="topMenu">
+		<a href="systems.html">SYSTEMS</a>
+	</li>
+	
+	<li class="topMenu">
+	<a href="dinosaurs.html">DINOSAURS</a>
+		<ul>
+			<li><a href="#brachInfo">Brachiosaurus</a></li>
+			<li><a href="#diloInfo">Dilophosaurus</a></li>
+			<li><a href="#gallInfo">Gallimimus</a></li>
+			<li><a href="#paraInfo">Parasaurs</a></li>
+			<li><a href="#procInfo">Procompsognathus</a></li>
+			<li><a href="#puttInfo">Puttacosaurus</a></li>
+			<li><a href="#tricInfo">Triceratops</a></li>
+			<li><a href="#tyranInfo">Tyrannosaurus Rex</a></li>
+			<li><a href="#veloInfo">Velociraptor</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+
+<div id="sideMenu">
+	<h3>I</h3>
+	<h3>N</h3>
+	<h3>T</h3>
+	<h3>R</h3>
+	<h3>A</h3>
+	<h3>N</h3>
+	<h3>E</h3>
+	<h3>T</h3>
+	<h3><a href="index.html">HOME</a></h3>
+</div>
+
+
+<h1>Dinosaur Profiles</h1>
+
+
+<div id="dinoGame">
+<table>
+	<tr>
+		<th  colspan="4">Try matching the pictures to the correct dinosaur</th>
+	</tr>
+	<tr>
+		<td><div id="dragClass"><img src="dinoPic/psitt.jpg" id="psitt" name="psitt" class="ui-widget-content"/></div></td>
+		<td><div id="dragClass"><img src="dinoPic/tyran.jpg" id="tyran" name="tyran" class="ui-widget-content"/></div></td>
+		<td><div id="dropClass"><div id="dropBrach" class="ui-widget-header"><p>Brachiosaurus</p></div></div></td>
+		<td><div id="dropClass"><div id="dropDilo" class="ui-widget-header">Dilophosaurus</div></div></td>
+	</tr>
+	<tr>
+		<td><div id="dragClass"><img src="dinoPic/brach.jpg" id="brach" name="brach" class="ui-widget-content"/></div></td>
+		<td><div id="dragClass"><img src="dinoPic/tric.jpg" id="tric" name="tric" class="ui-widget-content"/></div></td>
+		<td><div id="dropClass"><div id="dropGall" class="ui-widget-header">Gallimimus</div></div></td>
+		<td><div id="dropClass"><div id="dropPara" class="ui-widget-header">Parasaurolophus</div></div></td>
+	</tr>
+	<tr>
+		<td><div id="dragClass"><img src="dinoPic/gall.jpg" id="gall" name="gall" class="ui-widget-content"/></div></td>
+		<td><div id="dragClass"><img src="dinoPic/dilo.jpg" id="dilo" name="dilo" class="ui-widget-content"/></div></td>
+		<td><div id="dropClass"><div id="dropProc" class="ui-widget-header">Procompsognathus</div></div></td>
+		<td><div id="dropClass"><div id="dropPsitt" class="ui-widget-header">Psittacosaurus</div></div></td>
+	</tr>
+	<tr>
+		<td><div id="dragClass"><img src="dinoPic/velo.jpg" id="velo" name="velo" class="ui-widget-content"/></div></td>
+		<td><div id="dragClass"><img src="dinoPic/para.jpg" id="para" name="para" class="ui-widget-content"/></div></td>
+		<td><div id="dropClass"><div id="dropTric" class="ui-widget-header">Triceratops</div></div></td>
+		<td><div id="dropClass"><div id="dropTyra" class="ui-widget-header">Tyrannosaurus Rex</div></div></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div id="dragClass"><img src="dinoPic/proc.jpg" id="proc" name="proc" class="ui-widget-content"/></div></td>
+		<td colspan="2"><div id="dropClass"><div id="dropVelo" class="ui-widget-header">Velociraptor</div></div></td>
+	</tr>
+</table>
+</div>
+
+
+<div id="dinoInfo">
+	<div id="psittInfo">
+		<p>
+			<b>Psittacosaurus mongliensis</b></br>
+			"Psittacosaurus" (Greek psittakos = "parrot" + Greek saurus = "lizard")</br>
+			Size: 2 meters (7 feet)</br>
+			Period: Early Cretaceous (119 million to 97.5 million years ago)</br>
+			Place: Mongolia, China, Thailand
+		</p>
+		<p>
+			One of the early Ceratopians (the family of horned creatures which later evolved to include the more popular Triceratops), these "old-timers" have won a special place in the hearts of the visitors. These two-legged runners feature a square skull and a powerful (albeit toothless) "beak." The Psittacosaurus can make limited use of its four-fingered hands, especially where gathering food is concerned.
+		</p>
+	</div>
+	<div id="tyranInfo">
+		<p>
+			<b>Tyrannosaurus rex</b></br>
+			"Tyrannosaurus" (Greek tyrannos = "ruler" + Greek sauros = "lizard")</br>
+			Also known as "T-Rex"</br>
+			Size: 13 meters (42 feet)</br>
+			Period: Late Cretaceous (68 million to 65 million years ago)</br>
+			Place: Colorado, Wyoming, Montana, South Dakota, New Mexico, Mongolia, China
+		</p>
+		<p>
+			Originally believed to be the most dangerous hunter ever to have walked the earth, the T-Rex has lived up to expectations. An enormous skull (approximately 1.5 meters, or 4.5 feet) contains a powerful set of dagger-shaped teeth, measuring 8 to 16 centimeters (3 to 6 inches) in length and 2.5 centimeters (1 inch) wide. Its extremely functional arms (90 centimeters, or about 3 feet long) can lift weights approaching 500 pounds, and the highly-developed legs allow the creature to run nearly 25 miles per hour. Add the incredibly developed senses - including binocular vision, superior hearing and a keen sense of smell - and one begins to believe all of the hype.
+		</p>
+	</div>
+	<div id="brachInfo">
+		<p>
+			<b>Brachiosaurus altithorax</b></br>
+			"Brachiosaurus" (Latin bracchium = "arm" + Greek sauros = "lizard")</br>
+			Size: 25 meters (82 feet)</br>
+			Period: Late Jurassic (156 million to 145 million years ago)</br>
+			Place: Colorado, Tanzania
+		</p>
+	</div>
+	<div id="tricInfo">
+		<p>
+			<b>Triceratops horridus</b></br>
+			"Triceratops" (Greek tri = "three" + Greek keratos = "horn" + Greek ops = "face")</br>
+			Size: 9 meters (30 feet)</br>
+			Period: Late Cretaceous (68 million to 65 million years ago)</br>
+			Place: Colorado, Wyoming, Montana, South Dakota, Alberta
+		</p>
+		<p>
+			The Triceratops' distinctive features were familiar to nearly all even before the opening of the park. A short horn on the nose is supplemented by two larger horns on the forehead, averaging some 3 feet in length. These massive creatures also wield one of nature's most formidable defense mechanisms, a 2.5 meter (7.5 feet) neck frill composed of a solid sheet of bone. Many of these neck frills possess barnacle-like knobs as well, adding further protection.
+		</p>
+	</div>
+	<div id="gallInfo">
+		<p>
+			<b>Gallimimus bullatus</b></br>
+			"Gallimimus" (Latin gallus = "chicken" + Greek mimos = "mimic")</br>
+			Size: 5 meters (17 feet)</br>
+			Period: Late Cretaceous (75 million to 70 million years ago)</br>
+			Place: Gobi Desert, Mongolia
+		</p>
+		<p>
+			Similar in shape to the ostrich, the Gallimimus is Jurassic Park's fastest inhabitant, able to run as fast as 50 miles an hour, thanks to long legs and a relatively light body. It features a long bill and a shovel-like lower jaw.
+		</p>
+	</div>
+	<div id="paraInfo">
+		<p>
+			<b>Parasaurolophus walkeri</b></br>
+			"Parasaur" (Greek para = "by" + Greek sauros = "lizard" + Greek lophos = "crest")</br>
+			Size: 9 meters (30 feet)</br>
+			Period: Late Cretaceous (76 million to 65 million years ago)</br>
+			Place: Alberta, Utah, New Mexico
+		</p>
+		<p>
+			Able to walk on two feet as easily as four, the duckbilled (lambeosaurine) Parasaur is distinguished by its skull crest, an elongated, curved structure longer than the entire skull. This crest contains two hollow tubes, originally believed to be a respiratory device used in similar fashion to a snorkel. However, the true purpose of the tubes turns out to be for the creation of sound. The Parasaur is able to use these tubes to communicate with its fellow herd members through the emission of low-frequency vocal resonances.
+		</p>
+	</div>
+	<div id="diloInfo">
+		<p>
+			<b>Dilophosaurus wetherill</b></br>
+			"Dilophosaur" (Greek di = "two" + Greek lophos = "crest" + Greek sauros = "lizard")</br>
+			Size: 6 meters (20 feet)</br>
+			Period: Early Jurassic (208 million to 194 million years ago)</br>
+			Place: Arizona
+		</p>
+		<p>
+			One of Jurassic Park's stranger residents, the Dilophosaurus possesses unusually long forelimbs and a disproportionately large (although surprisingly delicate) head. The truly distinguishing feature, however, is the pair of arched crests positioned on top of its head from which multi-colored, almost hypnotic cowls fan out.
+		</p>
+	</div>
+	<div id="veloInfo">
+		<p>
+			<b>Velociraptor mongoliensis</b></br>
+			"Velociraptor" (Latin velox = "swift" + Latin raptor = "robber")</br>
+			Size: 2 meters (7 feet)</br>
+			Period: Late Cretaceous and early Campanian (85 million to 80 million years ago)</br>
+			Place: Mongolia, China, Russia
+		</p>
+		<p>
+			A swift predator with long claws and sharp teeth, the "Raptor" was originally intended as dinner for the more popular Tyrannosaur. While its larger counterpart has adopted a more sedentary lifestyle, however, the flat-snouted Raptor has grabbed the limelight. With surprising smarts, disproportionately large eyes and a love of the hunt, this beast has both amazed and terrified the Park's visitors.
+		</p>
+	</div>
+	<div id="procInfo">
+		<p>
+			<b>Compsognathus longipes</b></br>
+			"Compy" (Greek kompsos = "elegant" + Greek gnathos = "jaw")</br>
+			Size: 1 meter (40 inches)</br>
+			Period: Late Jurassic (156 million to 145 million years ago)</br>
+			Place: Germany, France
+		</p>
+		<p>
+			The smallest dinosaur in Jurassic Park has proven to be a fierce predator, thanks to a long neck, powerfully-clawed fingers, and massive upper legbones, enabling it to reach surprisingly fast speeds. Feet are also clawed, used to grasp prey.
+		</p>
+	</div>
+	
+</div>
+
+</body>
+</html>

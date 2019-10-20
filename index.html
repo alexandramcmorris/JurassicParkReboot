@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/marketing.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/trontastic/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link href="P2.css" rel="stylesheet" type="text/css" />
+
+<script>
+$(document).ready(function()
+{
+	//pulse pic, when clicked explode pic and show page
+	$('#inGenImage').effect('pulsate', {times:3}, 7000);
+	$('#ingenPic').click(function() { 
+		$('#ingenPic').hide('explode', {pieces: 20}, 1000);
+		$('.indexPage').show(1000); });
+	
+	//top menu display
+	$("#topM").menu();
+				 
+	$( "#sideMenu" ).hover(function() {
+		$( "#sideMenu h3" ).animate({
+		color: "green",
+		backgroundColor: "black"
+		});
+		});
+	
+	
+});	
+</script>
+
+<title>International Genetics Technologies</title>
+
+<!-- 
+Author: Alexandra McMorris
+File: ~/P2/index.html
+Honor Code: I acknowledge that this code represents my own work: Dated 11/27/16
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="redesign of Jurassic Park Lost-World" />
+<meta name="keywords" content="dinosaurs, humans, marketing, systems, security" />
+<meta name="author" content="Alexandra McMorris" />
+
+
+
+
+
+</head>
+
+<body> 
+
+<div id="inGenImage">
+	
+	<img src="InGen.jpg" id="ingenPic" />
+	
+</div>
+
+
+<div class="indexPage" style="display:none">
+
+<div id="menu">
+
+<ul id="topM">
+
+	<li class="topMenu">
+		<a href="humans.html">HUMANS</a>
+		<ul>
+			<li><a href="humans.html#handBook">Employee HandBook</a></li>
+			<li><a href="humans.html#lost">Lost and Found</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+	<a href="marketing.html">MARKETING</a>
+		<ul>
+			<li><a href="marketing.html#deve">Development</a></li>
+			<li><a href="marketing.html#proposal">Preliminary Plans</a></li>
+		</ul>
+	</li>
+	
+	<li class="topMenu">
+		<a href="security.html">SECURITY</a>
+		</li>
+	
+	<li class="topMenu">
+		<a href="systems.html">SYSTEMS</a>
+	</li>
+	
+	<li class="topMenu">
+	<a href="dinosaurs.html">DINOSAURS</a>
+		<ul>
+			<li><a href="dinosaurs.html#brachInfo">Brachiosaurus</a></li>
+			<li><a href="dinosaurs.html#diloInfo">Dilophosaurus</a></li>
+			<li><a href="dinosaurs.html#gallInfo">Gallimimus</a></li>
+			<li><a href="dinosaurs.html#paraInfo">Parasaurs</a></li>
+			<li><a href="dinosaurs.html#procInfo">Procompsognathus</a></li>
+			<li><a href="dinosaurs.html#puttInfo">Puttacosaurus</a></li>
+			<li><a href="dinosaurs.html#tricInfo">Triceratops</a></li>
+			<li><a href="dinosaurs.html#tyranInfo">Tyrannosaurus Rex</a></li>
+			<li><a href="dinosaurs.html#veloInfo">Velociraptor</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+
+<div id="sideMenu">
+	<h3>I</h3>
+	<h3>N</h3>
+	<h3>T</h3>
+	<h3>R</h3>
+	<h3>A</h3>
+	<h3>N</h3>
+	<h3>E</h3>
+	<h3>T</h3>
+	<h3><a href="index.html">HOME</a></h3>
+</div>
+
+<div id="indexStart">
+<h2 id="openIn">Welcome to the IntraNet...</h2>
+
+<h1>InGen</h1>
+
+<p id="original">Building tomorrow out of yesterday...</p>
+
+<p>*New employees please visit our <a href="humans.html">HUMANS</a> page
+	are view the handbook. This is mandatory.</p>
+
+</div>
+
+<footer id="copyRight">
+	<p>I acknowledge that the material above is quoted from the original website
+		and not mine. Whereas the coding is my original.</br>
+		It is being used for purely educational/nonprofit/noncomercial purposes.</p>
+	
+</footer>
+
+
+</div>
+
+
+</body>
+</html>
