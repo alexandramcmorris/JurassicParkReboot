@@ -4,4 +4,16 @@ Personalized Jurassic Park website I created in my Web Development course at Web
 ![Jurassic Intro](/ShowcaseImages/intro.jpg)
 
 
-https://github.com/alexandramcmorris/JurassicParkReboot/tree/master/ShowcaseImages
+![Jurassic Intro](/ShowcaseImages/Index.jpg)
+
+
+![Jurassic Intro](/ShowcaseImages/Marketing.jpg)
+
+
+![Jurassic Intro](/ShowcaseImages/HumanResources.jpg)
+
+
+![Jurassic Intro](/ShowcaseImages/SystemAdmin.jpg)
+
+
+![Jurassic Intro](/ShowcaseImages/DinoMatch.jpg)
